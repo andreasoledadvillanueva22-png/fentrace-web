@@ -7,7 +7,7 @@ const servicesData = [
     subtitle: 'Control y registro de temperaturas',
     description: 'Heladeras familiares, comerciales, cámaras frigoríficas, vitrinas, freezers y centrales de frío.',
     icon: Snowflake,
-    image: '/images/industrial-refrigeration.jpg',
+    image: '/images/refrigeracion.png',
     features: [
       'Limpieza de evaporadores y condensadores',
       'Verificación de presiones de trabajo',

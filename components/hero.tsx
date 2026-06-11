@@ -15,7 +15,7 @@ export function Hero() {
       {/* Background image */}
       <div className="absolute inset-0">
         <Image
-          src="/images/hero-tecnico.png"
+          src="/images/hero-felipe.jpg"
           alt="Técnico de FENT RACE trabajando en un equipo de climatización industrial"
           fill
           priority

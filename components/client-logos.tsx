@@ -1,5 +1,4 @@
 export function ClientLogos() {
-  // Reemplazá estos nombres por los archivos reales de los logos
   const clientLogos = [
     { src: '/images/logo-cliente-1.jpg', alt: 'Cliente 1' },
     { src: '/images/logo-cliente-2.jpg', alt: 'Cliente 2' },
@@ -22,18 +21,18 @@ export function ClientLogos() {
         {/* Carrusel Infinito */}
         <div className="relative overflow-hidden">
           {/* Gradientes laterales */}
-          <div className="absolute left-0 top-0 bottom-0 w-20 bg-gradient-to-r from-white to-transparent z-10 pointer-events-none" />
-          <div className="absolute right-0 top-0 bottom-0 w-20 bg-gradient-to-l from-white to-transparent z-10 pointer-events-none" />
+          <div className="absolute left-0 top-0 bottom-0 w-10 bg-gradient-to-r from-white to-transparent z-10 pointer-events-none" />
+          <div className="absolute right-0 top-0 bottom-0 w-10 bg-gradient-to-l from-white to-transparent z-10 pointer-events-none" />
 
           <div className="flex animate-scroll w-max">
             {/* Primer grupo de logos */}
             {clientLogos.map((logo, index) => (
-              <div key={index} className="flex-shrink-0 w-[16vw] px-6">
-                <div className="h-20 flex items-center justify-center grayscale hover:grayscale-0 transition-all duration-300">
+              <div key={index} className="flex-shrink-0 w-[40vw] sm:w-[25vw] md:w-[20vw] lg:w-[16vw] px-4 sm:px-6">
+                <div className="h-24 sm:h-20 flex items-center justify-center grayscale hover:grayscale-0 transition-all duration-300">
                   <img 
                     src={logo.src} 
                     alt={logo.alt} 
-                    className="max-h-16 max-w-full object-contain"
+                    className="max-h-16 sm:max-h-14 max-w-full object-contain"
                     loading="lazy"
                   />
                 </div>
@@ -41,12 +40,12 @@ export function ClientLogos() {
             ))}
             {/* Segundo grupo duplicado para el efecto infinito */}
             {clientLogos.map((logo, index) => (
-              <div key={`dup-${index}`} className="flex-shrink-0 w-[16vw] px-6">
-                <div className="h-20 flex items-center justify-center grayscale hover:grayscale-0 transition-all duration-300">
+              <div key={`dup-${index}`} className="flex-shrink-0 w-[40vw] sm:w-[25vw] md:w-[20vw] lg:w-[16vw] px-4 sm:px-6">
+                <div className="h-24 sm:h-20 flex items-center justify-center grayscale hover:grayscale-0 transition-all duration-300">
                   <img 
                     src={logo.src} 
                     alt={logo.alt} 
-                    className="max-h-16 max-w-full object-contain"
+                    className="max-h-16 sm:max-h-14 max-w-full object-contain"
                     loading="lazy"
                   />
                 </div>

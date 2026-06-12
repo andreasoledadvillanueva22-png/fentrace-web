@@ -1,3 +1,5 @@
+'use client'
+import { useState } from 'react'
 import { Snowflake, Wind, Home, Zap, Cpu, CheckCircle2, ArrowRight } from 'lucide-react'
 
 const servicesData = [
@@ -41,7 +43,7 @@ const servicesData = [
     subtitle: 'Casas Inteligentes',
     description: 'Integración con Google Home y Amazon Alexa. Control centralizado y gestión energética inteligente.',
     icon: Home,
-    image: '/images/domotica.png', //
+    image: '/images/domotica.png',
     features: [
       'Iluminación inteligente y control remoto',
       'Automatización de persianas y portones',
@@ -74,7 +76,7 @@ const servicesData = [
     subtitle: 'Automatización y Control',
     description: 'Diagnóstico electrónico avanzado, reparación de variadores de velocidad, controladores y PLC.',
     icon: Cpu,
-    image: '/images/electronica.png', // ⚠️ FALTA ESTA IMAGEN - ver paso 2
+    image: '/images/electronica.png',
     features: [
       'Reparación de placas y fuentes',
       'Diagnóstico de fallas electrónicas',
@@ -87,6 +89,12 @@ const servicesData = [
 ]
 
 export function Services() {
+  const [flippedIndex, setFlippedIndex] = useState<number | null>(null)
+
+  const handleCardClick = (index: number) => {
+    setFlippedIndex(flippedIndex === index ? null : index)
+  }
+
   return (
     <section id="servicios" className="py-16 bg-gray-50">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
@@ -98,14 +106,19 @@ export function Services() {
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {servicesData.map((service) => (
+          {servicesData.map((service, index) => (
             <div 
               key={service.id} 
               id={service.id}
-              className="group relative h-[420px] w-full cursor-pointer [perspective:1000px]"
+              className="scroll-mt-24 group relative h-[420px] w-full cursor-pointer [perspective:1000px]"
+              onClick={() => handleCardClick(index)}
             >
               <div 
-                className="relative h-full w-full rounded-xl shadow-lg transition-all duration-700 [transform-style:preserve-3d] group-hover:[transform:rotateY(180deg)]"
+                className={`relative h-full w-full rounded-xl shadow-lg transition-all duration-700 [transform-style:preserve-3d] ${
+                  flippedIndex === index 
+                    ? '[transform:rotateY(180deg)]' 
+                    : 'group-hover:[transform:rotateY(180deg)]'
+                }`}
               >
                 {/* FRONT FACE */}
                 <div 
@@ -123,7 +136,8 @@ export function Services() {
                     <h3 className="text-xl font-bold mb-1.5">{service.title}</h3>
                     <p className="text-sm text-gray-200 mb-3 line-clamp-2">{service.description}</p>
                     <div className="flex items-center gap-1.5 text-xs font-semibold uppercase tracking-wider text-blue-400">
-                      <span>Deslizar para ver más</span>
+                      <span className="hidden sm:inline">Pasa el mouse para ver más</span>
+                      <span className="sm:hidden">Tocá para ver más</span>
                       <ArrowRight className="h-3.5 w-3.5" />
                     </div>
                   </div>

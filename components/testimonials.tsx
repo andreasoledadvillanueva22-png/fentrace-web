@@ -28,7 +28,7 @@ export function Testimonials() {
         <div className="text-center mb-12">
           <h2 className="text-3xl font-bold text-gray-900 sm:text-4xl">Lo que dicen nuestros clientes</h2>
           <p className="mt-3 text-lg text-gray-600 max-w-2xl mx-auto">
-            Más de 6 reseñas verificadas en Google. La confianza de nuestros clientes es nuestro mejor respaldo.
+            Más de 60 reseñas verificadas en Google. La confianza de nuestros clientes es nuestro mejor respaldo.
           </p>
         </div>
 

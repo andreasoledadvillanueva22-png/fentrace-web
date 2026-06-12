@@ -24,15 +24,15 @@ export function Gallery() {
 
         {/* Carrusel Infinito */}
         <div className="relative overflow-hidden">
-          {/* Gradientes laterales */}
-          <div className="absolute left-0 top-0 bottom-0 w-20 bg-gradient-to-r from-white to-transparent z-10 pointer-events-none" />
-          <div className="absolute right-0 top-0 bottom-0 w-20 bg-gradient-to-l from-white to-transparent z-10 pointer-events-none" />
+          {/* Gradientes laterales (más pequeños en móvil para no tapar la foto) */}
+          <div className="absolute left-0 top-0 bottom-0 w-10 sm:w-20 bg-gradient-to-r from-white to-transparent z-10 pointer-events-none" />
+          <div className="absolute right-0 top-0 bottom-0 w-10 sm:w-20 bg-gradient-to-l from-white to-transparent z-10 pointer-events-none" />
 
-          {/* Contenedor del carrusel - ancho automático basado en el contenido */}
+          {/* Contenedor del carrusel */}
           <div className="flex animate-scroll w-max">
             {/* Primer grupo de fotos */}
             {galleryImages.map((img, index) => (
-              <div key={index} className="flex-shrink-0 w-[25vw] px-3">
+              <div key={index} className="flex-shrink-0 w-[85vw] sm:w-[45vw] md:w-[33vw] lg:w-[25vw] px-3 sm:px-4">
                 <div className="aspect-[4/3] overflow-hidden rounded-xl shadow-md bg-gray-100">
                   <img
                     src={img.src}
@@ -45,7 +45,7 @@ export function Gallery() {
             ))}
             {/* Segundo grupo duplicado para el efecto infinito */}
             {galleryImages.map((img, index) => (
-              <div key={`dup-${index}`} className="flex-shrink-0 w-[25vw] px-3">
+              <div key={`dup-${index}`} className="flex-shrink-0 w-[85vw] sm:w-[45vw] md:w-[33vw] lg:w-[25vw] px-3 sm:px-4">
                 <div className="aspect-[4/3] overflow-hidden rounded-xl shadow-md bg-gray-100">
                   <img
                     src={img.src}

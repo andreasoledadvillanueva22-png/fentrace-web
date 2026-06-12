@@ -6,9 +6,9 @@ import Link from 'next/link'
 const specialties = [
   { name: 'Refrigeración', href: '#refrigeracion' },
   { name: 'Aires Acondicionados', href: '#aires' },
+  { name: 'Calefacción', href: '#calefaccion' },
   { name: 'Domótica', href: '#domotica' },
   { name: 'Electricidad', href: '#electricidad' },
-  { name: 'Electrónica', href: '#electronica' },
 ]
 
 export function Navbar() {
@@ -34,14 +34,13 @@ export function Navbar() {
         <div className="hidden md:flex items-center gap-8">
           <Link href="/" className="text-sm font-medium text-gray-300 hover:text-white transition-colors">Inicio</Link>
           
-          {/* Dropdown Especialidades - Versión corregida */}
+          {/* Dropdown Especialidades */}
           <div className="relative group">
             <button className="flex items-center gap-1 text-sm font-medium text-gray-300 hover:text-white transition-colors py-2">
               Especialidades 
               <ChevronDown className="h-4 w-4 transition-transform duration-200 group-hover:rotate-180" />
             </button>
             
-            {/* Dropdown menu */}
             <div className="absolute top-full left-0 pt-2 w-56 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50">
               <div className="rounded-lg bg-gray-800 py-2 shadow-xl ring-1 ring-white ring-opacity-10 border border-gray-700">
                 {specialties.map((service) => (

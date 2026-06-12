@@ -1,6 +1,6 @@
 'use client'
 import { useState } from 'react'
-import { Snowflake, Wind, Home, Zap, Cpu, CheckCircle2, ArrowRight } from 'lucide-react'
+import { Snowflake, Wind, Flame, Zap, Home, CheckCircle2, ArrowRight } from 'lucide-react'
 
 const servicesData = [
   {
@@ -38,6 +38,41 @@ const servicesData = [
     ]
   },
   {
+    id: 'calefaccion',
+    title: 'Calefacción',
+    subtitle: 'Confort térmico con FENT RACE',
+    description: 'FENT RACE instala y mantiene calderas, radiadores, losa radiante y calefones. Confort térmico garantizado para tu hogar o comercio en Misiones.',
+    icon: Flame,
+    image: '/images/calefaccion.png',
+    features: [
+      'Instalación de calderas y radiadores',
+      'Mantenimiento de calefones',
+      'Reparación de losa radiante',
+      'Purga de radiadores y control de presión',
+      'Limpieza de quemadores',
+      'Detección de fugas en circuitos',
+      'Asesoramiento energético personalizado'
+    ]
+  },
+  {
+    id: 'electricidad',
+    title: 'Electricidad',
+    subtitle: 'Instalaciones y Mantenimiento',
+    description: 'Instalaciones eléctricas completas, tableros de potencia, sistemas trifásicos hasta 13,2 kV. Incluye servicios de electrónica industrial.',
+    icon: Zap,
+    image: '/images/electricidad.png',
+    features: [
+      'Tableros eléctricos y puesta a tierra',
+      'Iluminación interior y exterior',
+      'Bancos de capacitores',
+      'Termografías y medición de cargas',
+      'Limpieza técnica de tableros',
+      'Reparación de cortocircuitos',
+      'Instalaciones hasta 13,2 kV',
+      'Reparación de placas y variadores (electrónica)'
+    ]
+  },
+  {
     id: 'domotica',
     title: 'Domótica',
     subtitle: 'Casas Inteligentes',
@@ -51,39 +86,6 @@ const servicesData = [
       'Cámaras IP, alarmas y sensores',
       'Control de acceso biométrico',
       'Monitoreo remoto y seguridad'
-    ]
-  },
-  {
-    id: 'electricidad',
-    title: 'Electricidad',
-    subtitle: 'Instalaciones y Mantenimiento',
-    description: 'Instalaciones eléctricas completas, tableros de potencia, sistemas trifásicos hasta 13,2 kV.',
-    icon: Zap,
-    image: '/images/electricidad.png',
-    features: [
-      'Tableros eléctricos y puesta a tierra',
-      'Iluminación interior y exterior',
-      'Bancos de capacitores',
-      'Termografías y medición de cargas',
-      'Limpieza técnica de tableros',
-      'Reparación de cortocircuitos',
-      'Instalaciones hasta 13,2 kV'
-    ]
-  },
-  {
-    id: 'electronica',
-    title: 'Electrónica',
-    subtitle: 'Automatización y Control',
-    description: 'Diagnóstico electrónico avanzado, reparación de variadores de velocidad, controladores y PLC.',
-    icon: Cpu,
-    image: '/images/electronica.png',
-    features: [
-      'Reparación de placas y fuentes',
-      'Diagnóstico de fallas electrónicas',
-      'Sensores, actuadores e instrumentación',
-      'Programación de controladores',
-      'Reemplazo de componentes',
-      'Mantenimiento de control industrial'
     ]
   }
 ]

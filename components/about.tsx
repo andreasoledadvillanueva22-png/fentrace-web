@@ -1,7 +1,7 @@
 const stats = [
   { value: '+15', label: 'Años de experiencia' },
   { value: '+1.500', label: 'Servicios realizados' },
-  { value: '4', label: 'Especialidades técnicas' },
+  { value: '5', label: 'Especialidades técnicas' },
   { value: '100%', label: 'Trabajos garantizados' },
 ]
 

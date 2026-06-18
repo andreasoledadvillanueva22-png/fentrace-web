@@ -44,7 +44,7 @@ export function Footer() {
           <div className="md:col-span-1">
             <div className="flex items-center gap-3">
               <img 
-                src="/images/logo-fentrace.jpeg" 
+                src="/images/logo-fentrace.png" 
                 alt="FENT RACE" 
                 className="h-10 w-auto"
               />

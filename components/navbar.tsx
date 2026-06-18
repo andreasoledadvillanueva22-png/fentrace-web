@@ -20,7 +20,7 @@ export function Navbar() {
         {/* Logo */}
         <Link href="/" className="flex items-center gap-3">
           <img 
-            src="/images/logo-fentrace.jpeg" 
+            src="/images/logo-fentrace.png" 
             alt="FENT RACE" 
             className="h-12 w-auto"
           />

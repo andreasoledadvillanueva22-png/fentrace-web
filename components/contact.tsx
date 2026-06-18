@@ -72,39 +72,23 @@ ${form.message ? `\nConsulta: ${form.message}` : ''}`
               ))}
             </dl>
 
-            {/* 🚨 BLOQUE DE EMERGENCIAS 24 HS */}
             <div className="mt-8 rounded-xl border-l-4 border-red-500 bg-red-50 p-5 shadow-sm">
-              <div className="flex items-start gap-3">
-                <div className="flex size-10 shrink-0 items-center justify-center rounded-full bg-red-100 text-red-600">
-                  <AlertTriangle className="size-5" />
-                </div>
-                <div>
-                  <h3 className="font-bold text-red-700 text-base">
-                    🚨 Emergencias 24 horas
+              <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
+                <div className="flex items-center gap-3">
+                  <div className="flex size-10 shrink-0 items-center justify-center rounded-full bg-red-100 text-red-600">
+                    <AlertTriangle className="size-5" />
+                  </div>
+                  <h3 className="font-bold text-red-700 text-base sm:text-lg">
+                    Emergencias 24 horas
                   </h3>
-                  <p className="mt-1 text-sm text-red-600 leading-relaxed">
-                    Atención urgente fuera de horario para:
-                  </p>
-                  <ul className="mt-2 space-y-1 text-sm font-medium text-red-700">
-                    <li className="flex items-center gap-2">
-                      <span className="size-1.5 rounded-full bg-red-500" />
-                      Refrigeración (cámaras frigoríficas)
-                    </li>
-                    <li className="flex items-center gap-2">
-                      <span className="size-1.5 rounded-full bg-red-500" />
-                      Electricidad (fallas y cortocircuitos)
-                    </li>
-                  </ul>
-                  <p className="mt-3 text-xs text-red-600/80">
-                    Llamá directamente al{' '}
-                    <a
-                      href={`tel:${siteConfig.phoneDisplay.replace(/\s/g, '')}`}
-                      className="font-bold underline hover:text-red-800"
-                    >
-                      {siteConfig.phoneDisplay}
-                    </a>
-                  </p>
                 </div>
+                <a
+                  href={`tel:${siteConfig.phoneDisplay.replace(/\s/g, '')}`}
+                  className="inline-flex items-center gap-2 rounded-full bg-red-600 px-5 py-2.5 text-sm font-bold text-white shadow-lg transition-transform hover:scale-105 hover:bg-red-700"
+                >
+                  <Phone className="size-4" />
+                  Llamar ahora
+                </a>
               </div>
             </div>
           </div>

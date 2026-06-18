@@ -57,16 +57,19 @@ const servicesData = [
   {
     id: 'electricidad',
     title: 'Electricidad',
-    subtitle: 'Instalaciones y Mantenimiento',
-    description: 'Instalaciones eléctricas completas, tableros de potencia, sistemas trifásicos hasta 13,2 kV. Incluye servicios de electrónica industrial.',
+    subtitle: 'Soluciones Eléctricas Integrales',
+    description: 'Servicios, soluciones, desarrollo, diseño, proyecto y ejecución integrales eléctricos residencial, comercial e industrial.',
     icon: Zap,
     image: '/images/electricidad.png',
     features: [
+      'Termografías y mediciones de cargas',
+      'Armado de tableros de automatización y potencia',
+      'Informes técnicos y habilitaciones',
+      'Certificaciones y regularizaciones eléctricas',
+      'Trámites y planos eléctricos',
       'Tableros eléctricos y puesta a tierra',
       'Iluminación interior y exterior',
       'Bancos de capacitores',
-      'Termografías y medición de cargas',
-      'Limpieza técnica de tableros',
       'Reparación de cortocircuitos',
       'Instalaciones hasta 13,2 kV',
       'Reparación de placas y variadores (electrónica)'

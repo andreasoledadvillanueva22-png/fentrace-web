@@ -62,19 +62,14 @@ export function Hero() {
       {/* Banner de Emergencias 24 hs */}
       <div className="relative border-y border-red-500/30 bg-red-600/90 backdrop-blur-sm">
         <div className="mx-auto max-w-7xl px-4 py-4 sm:px-6 lg:px-8">
-          <div className="flex flex-col sm:flex-row items-center justify-between gap-3">
+          <div className="flex flex-col sm:flex-row items-center justify-center gap-3 sm:gap-6">
             <div className="flex items-center gap-3 text-white">
               <div className="flex size-10 shrink-0 items-center justify-center rounded-full bg-white/20">
                 <AlertTriangle className="size-5" />
               </div>
-              <div>
-                <p className="font-bold text-base sm:text-lg leading-tight">
-                  Emergencias 24 horas
-                </p>
-                <p className="text-xs sm:text-sm text-white/90">
-                  Refrigeración (cámaras frigoríficas) y Electricidad
-                </p>
-              </div>
+              <p className="font-bold text-base sm:text-lg leading-tight">
+                Emergencias 24 horas
+              </p>
             </div>
             <a
               href={`tel:${siteConfig.phoneDisplay.replace(/\s/g, '')}`}

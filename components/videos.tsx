@@ -25,13 +25,13 @@ export function Videos() {
           </p>
         </div>
 
-        {/* Video Principal de Domótica - YouTube Embed */}
-        <div className="mb-16">
-          <div className="relative aspect-video bg-black rounded-xl overflow-hidden shadow-2xl">
-            <iframe 
-              src="https://www.youtube.com/embed/_yqimPPhAMA" 
-              className="absolute inset-0 w-full h-full"
-              title="Video de Domótica FENT RACE"
+        <div className="w-full max-w-4xl mx-auto px-4">
+          <div className="relative w-full overflow-hidden rounded-2xl shadow-2xl aspect-video bg-gray-900">
+            <iframe
+              className="absolute top-0 left-0 w-full h-full"
+              src="https://www.youtube.com/embed/Cnc9gV18jEY"
+              title="FENT RACE - Domótica y Casas Inteligentes"
+              frameBorder="0"
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
               allowFullScreen
             ></iframe>

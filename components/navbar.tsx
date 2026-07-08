@@ -9,6 +9,7 @@ const specialties = [
   { name: 'Calefacción', href: '#calefaccion' },
   { name: 'Domótica', href: '#domotica' },
   { name: 'Electricidad', href: '#electricidad' },
+  { name: 'Electrónica', href: '#electronica' },
 ]
 
 export function Navbar() {

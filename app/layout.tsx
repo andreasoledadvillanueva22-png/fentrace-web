@@ -14,9 +14,9 @@ const spaceGrotesk = Space_Grotesk({
 })
 
 export const metadata: Metadata = {
-  title: 'FENT RACE | Servicio Técnico en Climatización y Electricidad - Misiones',
+  title: 'FENT RACE | Servicio Técnico en Aire Acondicionado, Refrigeración y Electricidad en Misiones',
   description:
-    'FENT RACE — Servicio técnico integral en refrigeración, aire acondicionado, calefacción, electricidad y domótica (casas inteligentes) en Misiones, Argentina. Instalación, mantenimiento y reparación. Emergencias 24 horas. +15 años de experiencia.',
+    'Servicio técnico integral en Misiones: aire acondicionado, refrigeración, calefacción, electricidad, domótica y electrónica. Instalación, mantenimiento y reparación con más de 15 años de experiencia.',
   keywords: [
     'servicio técnico Misiones',
     'refrigeración Misiones',
@@ -27,6 +27,8 @@ export const metadata: Metadata = {
     'electricista Misiones',
     'domótica Misiones',
     'casas inteligentes Misiones',
+    'electrónica Misiones',
+    'reparación de placas electrónicas Misiones',
     'emergencias 24 horas Misiones',
     'cámaras frigoríficas Misiones',
     'FENT RACE',
@@ -34,9 +36,9 @@ export const metadata: Metadata = {
     'mantenimiento aire acondicionado Posadas',
   ],
   openGraph: {
-    title: 'FENT RACE | Servicio Técnico Integral en Misiones',
+    title: 'FENT RACE | Servicio Técnico en Aire Acondicionado, Refrigeración y Electricidad en Misiones',
     description:
-      'Refrigeración, aire acondicionado, calefacción, electricidad y domótica para hogares, comercios e industrias en Misiones. Emergencias 24hs. +60 reseñas verificadas.',
+      'Aire acondicionado, refrigeración, calefacción, electricidad, domótica y electrónica para hogares, comercios e industrias en Misiones. Emergencias 24hs. +60 reseñas verificadas.',
     url: 'https://fentrace.com.ar',
     siteName: 'FENT RACE',
     locale: 'es_AR',
@@ -52,9 +54,9 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'FENT RACE | Servicio Técnico Integral en Misiones',
+    title: 'FENT RACE | Servicio Técnico en Aire Acondicionado, Refrigeración y Electricidad en Misiones',
     description:
-      'Refrigeración, aire acondicionado, calefacción, electricidad y domótica en Misiones. Emergencias 24hs.',
+      'Aire acondicionado, refrigeración, calefacción, electricidad, domótica y electrónica en Misiones. Emergencias 24hs.',
     images: ['/images/logo-fentrace.png'],
   },
   robots: {

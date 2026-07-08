@@ -1,8 +1,24 @@
 'use client'
 import { useState } from 'react'
-import { Snowflake, Wind, Flame, Zap, Home, CheckCircle2, ArrowRight } from 'lucide-react'
+import { Snowflake, Wind, Flame, Zap, Home, Cpu, CheckCircle2, ArrowRight } from 'lucide-react'
 
-const servicesData = [
+type ServiceCategory = {
+  name: string
+  items: string[]
+}
+
+type ServiceItem = {
+  id: string
+  title: string
+  subtitle: string
+  description: string
+  icon: typeof Snowflake
+  image: string
+  features?: string[]
+  categories?: ServiceCategory[]
+}
+
+const servicesData: ServiceItem[] = [
   {
     id: 'refrigeracion',
     title: 'Refrigeración',
@@ -90,6 +106,103 @@ const servicesData = [
       'Control de acceso biométrico',
       'Monitoreo remoto y seguridad'
     ]
+  },
+  {
+    id: 'electronica',
+    title: 'Electrónica',
+    subtitle: 'Servicio Técnico de Electrónica',
+    description: 'Reparación de placas electrónicas y componentes para todo tipo de equipos.',
+    icon: Cpu,
+    image: '/images/electronica.png',
+    categories: [
+      {
+        name: 'Electrónica General',
+        items: [
+          'Reparación de placas electrónicas de heladeras de sistemas No Frost',
+          'Cavas de Vino',
+          'Aire Acondicionado',
+          'Reparación de placas electrónicas',
+          'Reparación de equipos inverter',
+          'Reparación de módulos de potencia',
+          'Reparación de placas evaporadoras',
+          'Reparación de placas condensadoras',
+          'Reparación de fuentes electrónicas',
+          'Reparación de sensores de temperatura',
+          'Reparación de motores electrónicos',
+          'Diagnóstico de comunicación entre unidades',
+          'Programación y configuración de placas'
+        ]
+      },
+      {
+        name: 'Calefacción',
+        items: [
+          'Reparación de placas electrónicas de calefactores',
+          'Reparación de placas de calderas',
+          'Reparación de sistemas de encendido electrónico',
+          'Reparación de controles digitales',
+          'Reparación de sensores de temperatura',
+          'Reparación de termostatos electrónicos',
+          'Diagnóstico de sistemas de seguridad'
+        ]
+      },
+      {
+        name: 'Electricidad Residencial, Comercial e Industrial',
+        items: [
+          'Diagnóstico electrónico de instalaciones',
+          'Reparación de fuentes de alimentación',
+          'Reparación de protectores de tensión',
+          'Reparación de estabilizadores',
+          'Reparación de temporizadores electrónicos',
+          'Automatización eléctrica',
+          'Programación de controles electrónicos'
+        ]
+      },
+      {
+        name: 'Domótica y Automatización',
+        items: [
+          'Automatización de iluminación',
+          'Automatización de climatización',
+          'Control remoto de equipos',
+          'Programación de temporizadores',
+          'Instalación de sensores inteligentes',
+          'Control por Wi-Fi',
+          'Configuración de sistemas inteligentes para hogares y comercios'
+        ]
+      },
+      {
+        name: 'Electrónica Industrial',
+        items: [
+          'Reparación de fuentes switching',
+          'Reparación de fuentes conmutadas',
+          'Reparación de placas electrónicas industriales',
+          'Reparación de controladores electrónicos',
+          'Diagnóstico de componentes electrónicos',
+          'Reemplazo de componentes SMD',
+          'Soldadura electrónica de precisión',
+          'Reparación de circuitos impresos'
+        ]
+      },
+      {
+        name: 'Soldadoras Inverter',
+        items: [
+          'Reparación de placas de potencia',
+          'Reparación de módulos IGBT',
+          'Reparación de fuentes inverter',
+          'Reparación de sistemas de control',
+          'Diagnóstico electrónico completo'
+        ]
+      },
+      {
+        name: 'Laboratorio Electrónico',
+        items: [
+          'Reparación de placas electrónicas',
+          'Cambio de componentes electrónicos',
+          'Reparación de pistas dañadas',
+          'Soldadura SMD',
+          'Soldadura THT'
+        ]
+      }
+    ]
   }
 ]
 
@@ -164,14 +277,32 @@ export function Services() {
                   
                   <div className="flex-grow overflow-y-auto pr-1 scrollbar-hide">
                     <h4 className="text-xs font-bold text-blue-300 uppercase tracking-wider mb-2">Características y Servicios:</h4>
-                    <ul className="space-y-1.5">
-                      {service.features.map((feature, index) => (
-                        <li key={index} className="flex items-start gap-2 text-sm text-white">
-                          <CheckCircle2 className="h-4 w-4 text-green-400 flex-shrink-0 mt-0.5" />
-                          <span className="leading-tight">{feature}</span>
-                        </li>
-                      ))}
-                    </ul>
+                    {service.categories ? (
+                      <div className="space-y-3">
+                        {service.categories.map((category) => (
+                          <div key={category.name}>
+                            <h5 className="text-xs font-semibold text-blue-200 mb-1.5">{category.name}</h5>
+                            <ul className="space-y-1.5">
+                              {category.items.map((item, itemIndex) => (
+                                <li key={itemIndex} className="flex items-start gap-2 text-sm text-white">
+                                  <CheckCircle2 className="h-4 w-4 text-green-400 flex-shrink-0 mt-0.5" />
+                                  <span className="leading-tight">{item}</span>
+                                </li>
+                              ))}
+                            </ul>
+                          </div>
+                        ))}
+                      </div>
+                    ) : (
+                      <ul className="space-y-1.5">
+                        {service.features?.map((feature, featureIndex) => (
+                          <li key={featureIndex} className="flex items-start gap-2 text-sm text-white">
+                            <CheckCircle2 className="h-4 w-4 text-green-400 flex-shrink-0 mt-0.5" />
+                            <span className="leading-tight">{feature}</span>
+                          </li>
+                        ))}
+                      </ul>
+                    )}
                   </div>
                 </div>
               </div>

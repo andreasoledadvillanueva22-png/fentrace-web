@@ -7,6 +7,7 @@ const serviceLinks = [
   'Calefacción',
   'Domótica',
   'Electricidad',
+  'Electrónica',
 ]
 
 const navLinks = [

@@ -30,12 +30,12 @@ export function Hero() {
             Misiones · Argentina
           </span>
           <h1 className="mt-6 text-balance font-heading text-4xl font-bold leading-tight text-primary-foreground sm:text-5xl lg:text-6xl">
-            Servicio Técnico Integral en Climatización y Electricidad
+            Servicio Técnico Integral en Aire Acondicionado, Refrigeración y Electricidad
           </h1>
           <p className="mt-6 max-w-xl text-pretty text-lg leading-relaxed text-primary-foreground/85">
-            Refrigeración, aire acondicionado, calefacción, electricidad y
-            domótica (casas inteligentes) para hogares, comercios e industrias.
-            Instalación, mantenimiento y reparación con respaldo profesional.
+            Aire acondicionado, refrigeración, calefacción, electricidad,
+            domótica (casas inteligentes) y electrónica para hogares, comercios e
+            industrias. Instalación, mantenimiento y reparación con respaldo profesional.
           </p>
 
           <div className="mt-8 flex flex-col gap-3 sm:flex-row">

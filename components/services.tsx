@@ -114,94 +114,27 @@ const servicesData: ServiceItem[] = [
     description: 'Reparación de placas electrónicas y componentes para todo tipo de equipos.',
     icon: Cpu,
     image: '/images/electronica.png',
-    categories: [
-      {
-        name: 'Electrónica General',
-        items: [
-          'Reparación de placas electrónicas de heladeras de sistemas No Frost',
-          'Cavas de Vino',
-          'Aire Acondicionado',
-          'Reparación de placas electrónicas',
-          'Reparación de equipos inverter',
-          'Reparación de módulos de potencia',
-          'Reparación de placas evaporadoras',
-          'Reparación de placas condensadoras',
-          'Reparación de fuentes electrónicas',
-          'Reparación de sensores de temperatura',
-          'Reparación de motores electrónicos',
-          'Diagnóstico de comunicación entre unidades',
-          'Programación y configuración de placas'
-        ]
-      },
-      {
-        name: 'Calefacción',
-        items: [
-          'Reparación de placas electrónicas de calefactores',
-          'Reparación de placas de calderas',
-          'Reparación de sistemas de encendido electrónico',
-          'Reparación de controles digitales',
-          'Reparación de sensores de temperatura',
-          'Reparación de termostatos electrónicos',
-          'Diagnóstico de sistemas de seguridad'
-        ]
-      },
-      {
-        name: 'Electricidad Residencial, Comercial e Industrial',
-        items: [
-          'Diagnóstico electrónico de instalaciones',
-          'Reparación de fuentes de alimentación',
-          'Reparación de protectores de tensión',
-          'Reparación de estabilizadores',
-          'Reparación de temporizadores electrónicos',
-          'Automatización eléctrica',
-          'Programación de controles electrónicos'
-        ]
-      },
-      {
-        name: 'Domótica y Automatización',
-        items: [
-          'Automatización de iluminación',
-          'Automatización de climatización',
-          'Control remoto de equipos',
-          'Programación de temporizadores',
-          'Instalación de sensores inteligentes',
-          'Control por Wi-Fi',
-          'Configuración de sistemas inteligentes para hogares y comercios'
-        ]
-      },
-      {
-        name: 'Electrónica Industrial',
-        items: [
-          'Reparación de fuentes switching',
-          'Reparación de fuentes conmutadas',
-          'Reparación de placas electrónicas industriales',
-          'Reparación de controladores electrónicos',
-          'Diagnóstico de componentes electrónicos',
-          'Reemplazo de componentes SMD',
-          'Soldadura electrónica de precisión',
-          'Reparación de circuitos impresos'
-        ]
-      },
-      {
-        name: 'Soldadoras Inverter',
-        items: [
-          'Reparación de placas de potencia',
-          'Reparación de módulos IGBT',
-          'Reparación de fuentes inverter',
-          'Reparación de sistemas de control',
-          'Diagnóstico electrónico completo'
-        ]
-      },
-      {
-        name: 'Laboratorio Electrónico',
-        items: [
-          'Reparación de placas electrónicas',
-          'Cambio de componentes electrónicos',
-          'Reparación de pistas dañadas',
-          'Soldadura SMD',
-          'Soldadura THT'
-        ]
-      }
+    features: [
+      'Reparación de placas electrónicas de heladeras No Frost',
+      'Reparación de placas de aires acondicionados inverter',
+      'Reparación de placas de calderas y calefactores',
+      'Reparación de módulos IGBT y fuentes switching',
+      'Reparación de placas de soldadoras inverter',
+      'Diagnóstico de comunicación entre unidades',
+      'Reemplazo de componentes SMD y THT',
+      'Reparación de circuitos impresos y pistas dañadas',
+      'Reparación de sensores de temperatura y termostatos',
+      'Programación y configuración de placas electrónicas',
+      'Reparación de fuentes de alimentación y estabilizadores',
+      'Reparación de protectores de tensión y temporizadores',
+      'Soldadura electrónica de precisión',
+      'Reparación de cavas de vino',
+      'Reparación de equipos inverter',
+      'Reparación de módulos de potencia',
+      'Reparación de placas evaporadoras y condensadoras',
+      'Reparación de motores electrónicos',
+      'Automatización eléctrica y programación de controles',
+      'Instalación de sensores inteligentes y control por Wi-Fi'
     ]
   }
 ]
